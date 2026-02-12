@@ -55,16 +55,16 @@ class Portfolio:
         return rebalances
 
 
-porfolio = Portfolio()
+portfolio = Portfolio()
 
-porfolio.add_stock(Stock("LG", 10))
+portfolio.add_stock(Stock("LG", 10))
 
-porfolio.add_stock(Stock("SONY", 60))
+portfolio.add_stock(Stock("SONY", 60))
 
 market_prices = {"SONY": 500.0, "LG": 200.0}
 
 distribution = {"SONY": 0.7, "LG": 0.3}
 
-result = porfolio.set_distribution(distribution).rebalance(market_prices)
+result = portfolio.set_distribution(distribution).rebalance(market_prices)
 
 print(result)
